@@ -1,0 +1,20 @@
+﻿@using TravelTripProje.Models.Sınıflar;
+@model List<Hakkımızda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkımızda</h3>
+            <img src="~/web/images/about_banner.jpg" alt="" />
+            @foreach (var item in Model)
+            {
+                <p>@item.Aciklama</p>
+            }
+            <p>222222222222 </p>
+        </div>
+    </div>
+</div>
