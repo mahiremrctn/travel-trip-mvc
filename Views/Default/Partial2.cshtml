@@ -1,0 +1,22 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+<div class="right">
+    @foreach (var x in Model)
+    {
+        <div class="bot-left">
+            <img src="@(string.IsNullOrEmpty(x.BlogImage)
+            ?Url.Content("~/web/images/about_banner.jpg") : x.BlogImage)" alt="@x.Baslik"   style="width: 100%; height: 150px; object-fit: cover; object-position: center;"/>
+        </div>
+        <div class="left-text">
+            <h4>@x.Baslik</h4>
+            <span class="doller">@x.Tarih.ToString("dd.MM.yyyy")</span>
+            <p>
+                @(string.IsNullOrEmpty(x.Aciklama)
+                ? "Açıklama yakında eklenecek."
+                : (x.Aciklama.Length > 100
+                ? x.Aciklama.Substring(0, 100) + "..."
+                : x.Aciklama))
+            </p>
+            <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını Oku>></span></a></p>
+        </div>
+    }

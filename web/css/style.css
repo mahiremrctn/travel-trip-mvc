@@ -895,3 +895,10 @@ h2 {
     width: 285px;
 }
 }
+.header_bottom_right_images .rslides img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
