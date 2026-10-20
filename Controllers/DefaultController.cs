@@ -32,7 +32,7 @@ namespace TravelTripProje.Controllers
         }
         public PartialViewResult Partial3()
         {
-            var degerler = c.Blogs.ToList();
+            var degerler = c.Blogs.Take(10).ToList();
             return PartialView(degerler);
         }
         public PartialViewResult Partial4()
