@@ -24,20 +24,24 @@ namespace TravelTripProje.Controllers
             //var blogbul = c.Blogs.Where(x => x.ID == id).ToList();
             by.Deger1 = c.Blogs.Where(x => x.ID == id).ToList();
             by.Deger2 = c.Yorumlars.Where(x => x.BlogID == id).ToList();
+            by.Deger3 = c.Blogs.OrderByDescending(x => x.ID).Take(3).ToList();
             return View(by);
         }
         [HttpGet]
-        public PartialViewResult YorumYap(int id)
+        public PartialViewResult YorumFormu(int id)
         {
-            ViewBag.d = id;
-            return PartialView();
+            ViewBag.BlogID = id;
+            return PartialView("YorumYap");
         }
+
         [HttpPost]
-        public PartialViewResult YorumYap(Yorumlar y)
+        public ActionResult YorumYap(Yorumlar y)
         {
             c.Yorumlars.Add(y);
             c.SaveChanges();
-            return PartialView();
+
+            return RedirectToAction("BlogDetay", new { id = y.BlogID });
         }
+
     }
 }
