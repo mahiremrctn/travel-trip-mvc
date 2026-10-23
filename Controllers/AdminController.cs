@@ -6,10 +6,12 @@ using System.Web.Mvc;
 using TravelTripProje.Models.Sınıflar;   
 namespace TravelTripProje.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         // GET: Admin
         Context c = new Context();
+        [Authorize]
         public ActionResult Index()
         {
             var degerler = c.Blogs.ToList();
