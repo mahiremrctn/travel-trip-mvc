@@ -2,20 +2,22 @@
 
 ASP.NET MVC ile geliştirilmiş, yönetim paneli bulunan bir seyahat ve blog uygulaması.
 
-Bu proje, katıldığım bootcamp'in eğitmeninin YouTube eğitim serisi takip edilerek öğrenme amacıyla hazırlanmıştır. Tasarım ve uygulama akışı eğitimdeki projeye dayanmaktadır. Bağımsız bir ürün veya özgün tasarım iddiası taşımamaktadır.
+TravelTrip, Murat Yücedağ tarafından hazırlanan **50 Derste ASP.NET MVC ile Tatil & Seyahat Sitesi** eğitim serisi takip edilerek geliştirilmiştir. Projede MVC yapısı, Entity Framework ile veritabanı işlemleri ve yönetim paneli geliştirme konuları uygulamalı olarak çalışılmıştır.
 
 ## Özellikler
 
-### Ziyaretçi tarafı
+### Ziyaretçi Sayfaları
+
 - Blog yazılarını listeleme ve detaylarını görüntüleme
 - Bir blog yazısına yorum ekleme ve ilgili yorumları görüntüleme
 - Son eklenen yazıları listeleme
 - Ana sayfada veritabanından gelen blog içerikleri
 - Veritabanına bağlı Hakkımızda sayfası
 
-### Yönetim paneli
+### Yönetim Paneli
+
 - Yönetici girişi ve çıkışı
-- Admin sayfalarına kimlik doğrulama ile erişim
+- Yönetim paneline kimlik doğrulama ile erişim
 - Blog ekleme, listeleme, güncelleme ve silme
 - Yorum listeleme, güncelleme ve silme
 
@@ -51,6 +53,7 @@ Scripts/          JavaScript kütüphaneleri
 web/              Site şablon dosyaları
 web2/             Ek şablon dosyaları
 weblogin/         Giriş ekranı şablon dosyaları
+docs/images/      README ekran görüntüleri
 ```
 
 ## Yerelde Çalıştırma
@@ -85,17 +88,17 @@ weblogin/         Giriş ekranı şablon dosyaları
 - `/GirisYap/Login`: Yönetici girişi
 - `/Admin/Index`: Yönetim paneli (giriş gerektirir)
 
-Hazır yönetici hesabı ve örnek veritabanı bu README ile sağlanmamaktadır. Giriş için geliştirme veritabanında uygun bir yönetici kaydı bulunmalıdır. Bazı ana sayfa sorguları belirli kayıt kimliklerine bağlıdır; boş veritabanında ilgili bölümler içerik göstermeyebilir.
+Otomatik örnek veri ve yönetici hesabı oluşturma işlemi bulunmamaktadır. Giriş için geliştirme veritabanında uygun bir yönetici kaydı bulunmalıdır. Bazı ana sayfa sorguları belirli kayıt kimliklerine bağlıdır; boş veritabanında ilgili bölümler içerik göstermeyebilir.
 
 ## Öğrenme Kazanımları
 
-- MVC içinde model, view ve controller görevlerini uygulama
+- MVC yapısında Model, View ve Controller sorumluluklarını uygulama
 - Entity Framework ile CRUD işlemleri
-- Blog ve yorum arasındaki bire-çok ilişkinin kullanımı
+- Blog ve yorum arasındaki bire çok ilişkinin modellenmesi
 - LINQ ile veri filtreleme ve sıralama
 - Razor'a model aktarma
 - Layout ve Partial View ile arayüzü bölümlere ayırma
-- Forms Authentication ve Authorize ile giriş kontrolü
+- Forms Authentication ve `[Authorize]` ile erişim kontrolü
 
 ## Geliştirme Notları
 
